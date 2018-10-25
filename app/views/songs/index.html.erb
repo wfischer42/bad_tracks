@@ -1,0 +1,10 @@
+<h1>All Songs</h1>
+<% @songs.each do |song| %>
+  <div class="song-block">
+    <ul>
+      <li><%= song.title %></li>
+      <li>Plays: <%= song.play_count %></li>
+      <%= button_to "Add Song", cart_items_path, method: "POST" %>
+    </ul>
+  </div>
+<% end %>
